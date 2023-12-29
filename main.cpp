@@ -1,17 +1,11 @@
 #include <iostream>
 #include <cstdlib>
+#include <cstring>
 #include <vector>
 #include <algorithm>
-
+#include "play_system.h"
 
 using namespace std;
-
-void play_system(){
-    //dummy
-    vector<int> box {1,2,3,4,5,6,7,8,9};
-    vector<int> player_one {};
-    vector<int> player_two {};
-}
 
 void display_rules()
 {
@@ -61,10 +55,10 @@ int main()
         cout << "\nPlease type number (1-3) to select:  ";
 
         // Validate the user input
+        
         char buffer[128];
         fgets(buffer,128,stdin);
         sscanf(buffer,"%d",&opt);
-
         if (opt == 1 | opt == 2 | opt == 3)
         {
             switch (opt)
