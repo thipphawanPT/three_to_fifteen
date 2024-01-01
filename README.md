@@ -11,3 +11,8 @@ Rules
 3. Each player takes it in turns to choose one of the whole numbers 1 to 9.
 4. Each number can be chosen only once.
 5. If each person has three numbers and neither player has a total of 15, then draw.
+-----------------------------------------------------------------------------------------------------
+
+ASCII Text by https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+
+Next milestone : Implement Player vs AI (simple)
