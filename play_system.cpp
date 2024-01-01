@@ -21,12 +21,12 @@ int check_winner(std::vector<int> &vec1,std::vector<int> &vec2, int round){
         res2 = vec2[i]+res2;
     }
     
-    if (res1 == 15)
+    if (res1 == 15 && round >= 5)
         {
             cout << "Winner: Player 1 !!!" << endl;
             return 1;
         }
-    else if (res2 == 15)
+    else if (res2 == 15 && round == 6)
         {   
             cout << "Winner: Player 2 !!!" << endl;
             return 1;
@@ -67,7 +67,7 @@ int check_number(std::vector<int> &vec){
     while(true){
         int letter {};
         
-        cout << endl << "Your select: ";
+        cout << endl << "You select: ";
         cin >> str;
         for(size_t i {} ; i < str.length(); i++)
         {
