@@ -16,3 +16,5 @@ Rules
 ASCII Text by https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
 
 Next milestone : Implement Player vs AI (simple)
+
+Determined: AI is always Player2.
