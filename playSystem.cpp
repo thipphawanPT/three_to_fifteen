@@ -82,7 +82,8 @@ void play(){
                 player2.display();
                 pPlayer->selectNumber(box);
                 if (pPlayer->checkWinner() == true){
-                    cout << "\n" << "Congrats!! Player " << pPlayer->getID() << "win!!" << endl;
+                    cout << "\n" << "Congrats!! Player " << pPlayer->getID() << " [win]!!" << endl;
+                    system("PAUSE");
                     break;
                 }
                 else if (turn >= 9 && player1.checkWinner() == false && player2.checkWinner() == false){
@@ -92,6 +93,7 @@ void play(){
                     cout << "----O--O---------" << endl;
                     cout << "|     Draw ! ~  |" << endl;
                     cout << "-----------------" << endl; 
+                    system("PAUSE");
                     break;
                 }
                 else{

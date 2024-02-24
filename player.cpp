@@ -17,9 +17,9 @@ Player::~Player()
 
 }
 
-int Player:getID() const
+int Player::getID() const
 {
-    return this.id;
+    return this->id;
 }
 
 
@@ -32,7 +32,8 @@ void Player::selectNumber(std::vector<int> &box)
         int letterCount {};
         
         cout << endl << "You select: ";
-        cin >> str;
+        cin >> ws;
+        getline(cin,str,'\n');
         for(size_t i {} ; i < str.length(); i++)
         {
             if (isdigit(str[i]) == false)
@@ -56,7 +57,7 @@ void Player::selectNumber(std::vector<int> &box)
                 if(it != box.end())
                 {
                     result = *it;
-                    this.numbers.push_back(result);
+                    this->numbers.push_back(result);
                     box.erase(it);
                     break;
 
@@ -79,14 +80,14 @@ void Player::selectNumber(std::vector<int> &box)
     
 }
 
-ิbool Player::checkWinner()
+bool Player::checkWinner()
 {
     
-    for(auto n1 : this.numbers){
+    for(auto n1 : this->numbers){
         int total{};
-        for(auto n2 : this.numbers){
+        for(auto n2 : this->numbers){
             if(n2 != n1){
-                for(auto n3 : this.numbers){
+                for(auto n3 : this->numbers){
                     if(n3 != n2 && n3 != n1){
                         total = n1+n2+n3;
                     }
@@ -103,8 +104,8 @@ void Player::selectNumber(std::vector<int> &box)
 
 void Player::display() const
 {
-    cout << "Player " << this.id << "selected: "
-    if (numbers.empty == true){
+    cout << "Player " << this->id << " selected: ";
+    if (numbers.empty() == true){
         cout << " ";
     }
     else{
