@@ -1,7 +1,4 @@
 #include <iostream>
-#include <cstdlib>
-#include <cstring>
-#include <vector>
 #include <algorithm>
 #include "play_system.h"
 
@@ -15,7 +12,7 @@ void display_rules()
     cout << "2. The numbers are 1, 2, 3, 4, 5, 6, 7, 8, 9" << endl;
     cout << "3. Each player takes it in turns to choose one of the whole numbers 1 to 9." << endl;
     cout << "4. Each number can be chosen only once." << endl;
-    cout << "5. If each person has three numbers and neither player has a total of 15, then draw.\n" << endl;
+    cout << "5. If all numbers were selected and neither player has a certian three number sum up to 15, then draw.\n" << endl;
     system("PAUSE");
 
 }

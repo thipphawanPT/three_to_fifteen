@@ -8,6 +8,30 @@
 using namespace std;
 
 
+/* Check number function
+*  vector - 
+*  return 
+*/
+int check_number(std::vector<int> &vec);
+
+/* Check turn function 
+*  int round - get the round to figure out whose turn
+*  odd round is for player 1 and even round is for player 2.
+*  return number 1 and 2 for identify player.
+*/
+int check_turn(int round);
+
+
+/* Check winner function 
+*  int round - get the round to figure out whose turn
+*  vec - player
+*  return number 1 and 2 for identify winner player.
+*/
+int check_winner(std::vector<int> &vec1,std::vector<int> &vec2, int round);
+
+
+
+
 int check_winner(std::vector<int> &vec1,std::vector<int> &vec2, int round){
     int res1 {};
     int res2 {};
@@ -126,6 +150,7 @@ void play_system(){
     vector<int> player_two {0,0,0};
     vector<int> *player {nullptr};
     int turn {1}; 
+    int pre_turn {}; // value 1 means player one, 2 means player two, defualt is 0.
     int num{};
     string str; // number that player select
     bool cont = true; // use for while loop
@@ -137,14 +162,13 @@ void play_system(){
     {   
         system("CLS");
         // see whose turn and assign to player
-        int user = check_turn(turn);
-        if (user == 1)
-        {
-            player = &player_one;
-        }
-        else if (user == 2)
-        {
+        if (pre_turn == 1){
             player = &player_two;
+            pre_turn = 2;
+        }
+        else{
+            player = &player_one;
+            pre_turn = 1;
         }
 
         if(player == nullptr)
@@ -154,7 +178,7 @@ void play_system(){
         else
         {
             cout << endl << "=======================================" <<endl;
-            cout << "Turn: " << turn << " Player: " << user;
+            cout << "Turn: " << turn << " Player: ";
             cout << "\nYou can only select number below:\n" ;
             for (size_t i {}; i < box.size(); i++)
             {
@@ -164,8 +188,8 @@ void play_system(){
                 } 
             }
             cout << endl << "=======================================" << endl;
-            cout << "Player 1 selected: " << player_one[0] << " " << player_one[1] << " " << player_one[2] << endl;
-            cout << "Player 2 selected: " << player_two[0] << " " << player_two[1] << " " << player_two[2] << endl;
+            cout << "Player 1 selected: " << player_one[0] << " " << player_one[1] << " " << player_one[2] << " (" << player_one[0]+player_one[1]+player_one[2] << ")" << endl;
+            cout << "Player 2 selected: " << player_two[0] << " " << player_two[1] << " " << player_two[2] << " (" << player_two[0]+player_two[1]+player_two[2] << ")" << endl;
             cout << "---------------------------------------";
             num = check_number(box);
             player->at(m) = num;
