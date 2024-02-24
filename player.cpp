@@ -57,7 +57,7 @@ void Player::selectNumber(std::vector<int> &box)
                 if(it != box.end())
                 {
                     result = *it;
-                    this->numbers.push_back(result);
+                    this->numbers.push_back(result); 
                     box.erase(it);
                     break;
 
