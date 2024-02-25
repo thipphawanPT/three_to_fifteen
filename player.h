@@ -5,14 +5,14 @@
 
 
 class Player{
-private:
+protected:
     int id; 
     std::vector<int> numbers; // store selected number of each player.
 public:
     Player(int id);
-    ~Player();
+    virtual ~Player();
     int getID() const;
-    void selectNumber(std::vector<int> &box);
+    virtual void selectNumber(std::vector<int> &box);
     bool checkWinner();
     void display() const;
     

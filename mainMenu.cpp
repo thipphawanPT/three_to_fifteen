@@ -25,7 +25,7 @@ int main()
         char buffer[128];
         fgets(buffer,128,stdin);
         sscanf(buffer,"%d",&opt);
-        if (opt == 1 | opt == 2 | opt == 3)
+        if (opt == 1 | opt == 2 | opt == 3 | opt == 4)
         {
             switch (opt)
             {
@@ -33,9 +33,12 @@ int main()
                 play();
                 break;
             case 2:
-                displayRules();
+                playWithAI();
                 break;
             case 3:
+                displayRules();
+                break;
+            case 4:
                 cont = false;
                 break;
             default:

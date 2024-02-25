@@ -4,6 +4,8 @@
 // Main function to operate the game
 void play();
 
+void playWithAI();
+
 void displayMenu();
 
 void displayRules();

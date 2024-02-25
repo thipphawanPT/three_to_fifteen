@@ -21,8 +21,9 @@ void displayMenu()
         cout << "\n\n" ;
 
         cout << "\t\t1. Play" << endl;
-        cout << "\t\t2. Rules" << endl;
-        cout << "\t\t3. Exit" << endl;
+        cout << "\t\t2. Play versus AI" << endl;
+        cout << "\t\t3. Rules" << endl;
+        cout << "\t\t4. Exit" << endl;
 }
 
 
@@ -83,10 +84,14 @@ void play(){
                 pPlayer->selectNumber(box);
                 if (pPlayer->checkWinner() == true){
                     cout << "\n" << "Congrats!! Player " << pPlayer->getID() << " [win]!!" << endl;
+                    cout << "\n--------------------END--------------------" << endl;
+                    player1.display();
+                    player2.display();
+                    cout << endl;
                     system("PAUSE");
                     break;
                 }
-                else if (turn >= 9 && player1.checkWinner() == false && player2.checkWinner() == false){
+                else if (turn == 8 && player1.checkWinner() == false && player2.checkWinner() == false){
                     cout << endl;
                     cout << "     /\\~-_" << endl;
                     cout << "   =(o^o = 7" << endl;
@@ -104,8 +109,11 @@ void play(){
 
     }
   
-
-
 }
 
 
+
+void playWithAI()
+{
+    
+}
