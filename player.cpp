@@ -109,3 +109,15 @@ void Player::display() const
 
     cout << endl;
 }
+
+
+AI::AI(){}
+AI::~AI(){}
+
+void AI::displayOther(std::vector<int> other)
+{
+     std::cout << "\n";
+     for(auto num:other){
+          std::cout<< num << " ";
+     }
+}

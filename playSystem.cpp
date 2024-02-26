@@ -2,7 +2,7 @@
 #include <algorithm>
 #include "playSystem.h"
 #include "player.h"
-#include "ai.h"
+
 
 using namespace std;
 
