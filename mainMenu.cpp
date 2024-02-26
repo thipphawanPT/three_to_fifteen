@@ -39,7 +39,7 @@ int main()
                 displayRules();
                 break;
             case 4:
-                cont = false;
+                return 0;
                 break;
             default:
                 break;
@@ -47,7 +47,7 @@ int main()
         }
         else
         {
-            cout << "[ERROR] Please type 1,2 or 3" << endl << flush;
+            cout << "[ERROR] Please type 1,2,3 or 4" << endl << flush;
     
             system("PAUSE");
         }
@@ -55,5 +55,5 @@ int main()
 
 
  
-    return 0;
+   
     }

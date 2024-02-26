@@ -7,20 +7,12 @@
 
 using namespace std;
 
-Player::Player(int id): id{id} 
-{
 
-}
+Player::Player(){}
+Player::Player(int id): id{id} {}
+Player::~Player(){}
 
-Player::~Player()
-{
-
-}
-
-int Player::getID() const
-{
-    return this->id;
-}
+int Player::getID() const { return this->id; }
 
 
 
