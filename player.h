@@ -6,19 +6,22 @@
 
 class Player{
 private:
-    int id; 
+    int id;
+    std::vector<int> numbers {1,2,3,4,5}; // store selected number of each player. 
 public:
     Player();
     Player(int id); 
     virtual ~Player();
     int getID() const;
-    std::vector<int> numbers; // store selected number of each player.
+    std::vector<int> getNumbers() const;
     virtual void selectNumber(std::vector<int> &box);
     bool checkWinner();
     void display() const;
     
 
 };
+
+
 
 
 #endif

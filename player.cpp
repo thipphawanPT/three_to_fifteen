@@ -14,6 +14,7 @@ Player::~Player(){}
 
 int Player::getID() const { return this->id; }
 
+std::vector<int> Player::getNumbers() const { return this->numbers; }
 
 
 void Player::selectNumber(std::vector<int> &box)

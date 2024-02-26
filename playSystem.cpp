@@ -2,7 +2,7 @@
 #include <algorithm>
 #include "playSystem.h"
 #include "player.h"
-
+#include "ai.h"
 
 using namespace std;
 
@@ -116,5 +116,8 @@ void play(){
 
 void playWithAI()
 {
-    
+    Player user(1);
+    AI enemy;
+    enemy.displayOther(user.getNumbers());
+    system("PAUSE");
 }
