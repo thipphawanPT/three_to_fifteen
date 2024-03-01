@@ -14,10 +14,10 @@ Player::~Player(){}
 
 int Player::getID() const { return this->id; }
 
-std::vector<int> Player::getNumbers() const { return this->numbers; }
 
 
-void Player::selectNumber(std::vector<int> &box)
+
+bool Player::selectNumber(std::vector<int> &box)
 {
     string str;
     int result{};
@@ -52,7 +52,7 @@ void Player::selectNumber(std::vector<int> &box)
                     result = *it;
                     this->numbers.push_back(result); 
                     box.erase(it);
-                    break;
+                    return true;
 
                 }
                 else
@@ -110,14 +110,3 @@ void Player::display() const
     cout << endl;
 }
 
-
-AI::AI(){}
-AI::~AI(){}
-
-void AI::displayOther(std::vector<int> other)
-{
-     std::cout << "\n";
-     for(auto num:other){
-          std::cout<< num << " ";
-     }
-}
