@@ -110,3 +110,12 @@ void Player::display() const
     cout << endl;
 }
 
+void Player::pushNum(int num)
+{
+    this->numbers.push_back(num);
+}
+
+void Player::popNum()
+{
+    this->numbers.pop_back();
+}

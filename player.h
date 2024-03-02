@@ -16,6 +16,8 @@ public:
     int getID() const;
     std::vector<int> getNumbers() const;
     bool selectNumber(std::vector<int> &box);
+    void pushNum(int num);
+    void popNum();
     bool checkWinner();
     void display() const;
     
