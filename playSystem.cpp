@@ -7,7 +7,12 @@
 const int MAX = 1000000;
 const int MIN = -1000000;
 
-
+/*
+*   Main module
+*
+*
+*
+*/
 void displayMenu()
 {
        
@@ -28,6 +33,12 @@ void displayMenu()
 }
 
 
+/*
+*   Main module
+*
+*
+*
+*/
 void displayRules()
 {
     system("CLS");
@@ -41,7 +52,12 @@ void displayRules()
 
 }
 
-
+/*
+*   Main module
+*
+*
+*
+*/
 void play(){
     std::vector<int> box {1,2,3,4,5,6,7,8,9}; // number that user can select.
     Player player1(1);
@@ -98,6 +114,7 @@ void play(){
 
 
     }
+    // if nobody win until box is empty then draw
     if( player1.checkWinner() == false && player2.checkWinner() == false){
         std::cout << std::endl;
         std::cout << "     /\\~-_" << std::endl;
@@ -110,6 +127,9 @@ void play(){
   
 }
 
+
+
+// Find left numbers that can select
 std::vector<int> possibleMove(std::vector<int> box)
 {
     std::vector<int> moves;
@@ -122,6 +142,7 @@ std::vector<int> possibleMove(std::vector<int> box)
 }
 
 
+// Minimax algorithm
 int minimax(std::vector<int> &copyBox, Player player1, Player player2, bool isMax)
 {
     
@@ -171,7 +192,7 @@ int minimax(std::vector<int> &copyBox, Player player1, Player player2, bool isMa
 
 
 
-
+// Find best move for ai
 int findBestMove(std::vector<int> copyBox, Player user, Player ai)
 {
     int bestScore = MIN;
@@ -181,8 +202,7 @@ int findBestMove(std::vector<int> copyBox, Player user, Player ai)
         ai.pushNum(move);
         std::vector<int>::iterator it = find(copyBox.begin(),copyBox.end(),move);
         copyBox.erase(it);
-        int score = minimax(copyBox,user,ai,false);
-        
+        int score = minimax(copyBox,user,ai,false); 
         copyBox.push_back(move);
         ai.popNum();
         if (score > bestScore) {
@@ -194,7 +214,12 @@ int findBestMove(std::vector<int> copyBox, Player user, Player ai)
 }
 
 
-
+/*
+*   Main module
+*
+*
+*
+*/
 
 void playWithAI()
 {
@@ -206,6 +231,7 @@ void playWithAI()
     while (!box.empty()){
         system("CLS");
         if(preTurn == 1){
+            // ai part
             preTurn = 2;
             std::cout << std::endl << "=======================================" << std::endl; 
             std::cout << "Turn: AI (Player 2)" << std::endl;
@@ -236,7 +262,7 @@ void playWithAI()
            
         }
         else{
-            ///
+            // human part
             preTurn = 1;
             std::cout << std::endl << "=======================================" << std::endl; 
             std::cout << "Turn: Human (Player 1)" << std::endl;

@@ -5,7 +5,7 @@
 using namespace std;
 
 
-
+// Operate menu and recieve option from user.
 
 int main()
     {

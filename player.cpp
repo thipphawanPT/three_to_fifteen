@@ -12,6 +12,9 @@ Player::Player(){}
 Player::Player(int id): id{id} {}
 Player::~Player(){}
 
+
+
+
 int Player::getID() const { return this->id; }
 
 
@@ -21,12 +24,15 @@ bool Player::selectNumber(std::vector<int> &box)
 {
     string str;
     int result{};
+    /* Loop until user enter validated input*/
     while(true){
         int letterCount {};
         
+        // get input from user.
         cout << endl << "You select: ";
-        cin >> ws;
+        cin >> ws; // extract whitespace
         getline(cin,str,'\n');
+        // check that are there letter in input
         for(size_t i {} ; i < str.length(); i++)
         {
             if (isdigit(str[i]) == false)
@@ -43,7 +49,7 @@ bool Player::selectNumber(std::vector<int> &box)
         else
         {
             int num = stoi(str);
-    
+            // get input to vector numbers
             if (num >= 1 && num <= 9)
             {
                 vector<int>::iterator it = find(box.begin(),box.end(),num);
@@ -73,6 +79,8 @@ bool Player::selectNumber(std::vector<int> &box)
     
 }
 
+
+// find the certain three numbers that sum up to fifteen
 bool Player::checkWinner()
 {
     
