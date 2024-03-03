@@ -7,7 +7,9 @@
 const int MAX = 1000000;
 const int MIN = -1000000;
 
-
+/*
+       Display Game logo and menuoption
+*/
 void displayMenu()
 {
        
@@ -27,6 +29,10 @@ void displayMenu()
         std::cout << "\t\t4. Exit" << std::endl;
 }
 
+/*
+       Display Rules of game
+*/
+
 
 void displayRules()
 {
@@ -42,11 +48,16 @@ void displayRules()
 }
 
 
+/*
+       Main module. 
+       Player against Player
+*/
+
 void play(){
     std::vector<int> box {1,2,3,4,5,6,7,8,9}; // number that user can select.
     Player player1(1);
     Player player2(2);
-    Player* pPlayer;
+    Player* pPlayer; // pointer to Player
     int preTurn {}; // value 1 means player one, 2 means player two, defualt is 0.
     int turn {0};
 
