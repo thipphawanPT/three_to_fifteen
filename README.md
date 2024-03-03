@@ -18,8 +18,8 @@ ASCII Text by https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20S
 
 Roadmap:
 
-1.  Three to fifteen game on terminal windows.
+1.  Three to fifteen game on terminal windows. (DONE)
 
-2.  Minimax algorithm for Play vs AI.
+2.  Minimax algorithm for Play vs AI. (DONE)
 
-3.  Alpha-beta pruning.
+3.  Alpha-beta pruning. (IN PROGRESS)
