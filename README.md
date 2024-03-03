@@ -2,9 +2,8 @@
 Three to fifteen, play on Windows terminal.
 Play against AI with minimax algorithm.
 
-[Wiki](https://en.wikipedia.org/wiki/Number_Scrabble)
 
-Players : 2 people
+[Read what is Three to fifteen](https://en.wikipedia.org/wiki/Number_Scrabble)
 
 Rules
 1. To win, you must have three numbers sum up to fifteen.
@@ -17,3 +16,10 @@ Rules
 ASCII Text by https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
 
 
+Roadmap:
+
+1.  Three to fifteen game on terminal windows.
+
+2.  Minimax algorithm for Play vs AI.
+
+3.  Alpha-beta pruning.
