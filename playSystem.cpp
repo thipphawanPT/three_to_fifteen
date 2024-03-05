@@ -7,12 +7,7 @@
 const int MAX = 1000000;
 const int MIN = -1000000;
 
-/*
-*   Main module
-*
-*
-* Display Game logo and menu option
-*/
+
 void displayMenu()
 {
        
@@ -32,17 +27,9 @@ void displayMenu()
         std::cout << "\t\t4. Exit" << std::endl;
 }
 
-/*
-       Display Rules of game
-*/
 
 
-/*
-*   Main module
-*
-*
-*
-*/
+
 void displayRules()
 {
     system("CLS");
@@ -56,24 +43,12 @@ void displayRules()
 
 }
 
-/*
-*   Main module
-*
-*
-*
-*/
 
-/*
-       Main module. 
-       Player against Player
-*/
-
->>>>>>> f3eda51f66d03bea5dc1642a555b115d136e44fb
 void play(){
     std::vector<int> box {1,2,3,4,5,6,7,8,9}; // number that user can select.
     Player player1(1);
     Player player2(2);
-    Player* pPlayer; // pointer to Player
+    Player* pPlayer; // pointer to Player.
     int preTurn {}; // value 1 means player one, 2 means player two, defualt is 0.
     int turn {0};
 
@@ -121,10 +96,12 @@ void play(){
                 else{
                     turn++;
                 }
+                
         }
 
 
     }
+    
     // if nobody win until box is empty then draw
     if( player1.checkWinner() == false && player2.checkWinner() == false){
         std::cout << std::endl;
@@ -136,7 +113,7 @@ void play(){
         system("PAUSE");
     }
 
-  delete(pPlayer);
+  
 }
 
 
@@ -226,12 +203,7 @@ int findBestMove(std::vector<int> copyBox, Player user, Player ai)
 }
 
 
-/*
-*   Main module
-*
-*
-*
-*/
+
 
 void playWithAI()
 {
