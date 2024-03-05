@@ -56,14 +56,12 @@ void displayRules()
 
 }
 
-<<<<<<< HEAD
 /*
 *   Main module
 *
 *
 *
 */
-=======
 
 /*
        Main module. 
@@ -137,7 +135,8 @@ void play(){
         std::cout << "-----------------" << std::endl; 
         system("PAUSE");
     }
-  
+
+  delete(pPlayer);
 }
 
 
